@@ -5,7 +5,7 @@ import java.util.List;
 
 import model.BookModel;
 
-public interface BookDaoInterface {
+public interface BookDao {
 	boolean addBook(BookModel book) throws SQLException;
 
 	boolean editBook(BookModel book) throws SQLException;

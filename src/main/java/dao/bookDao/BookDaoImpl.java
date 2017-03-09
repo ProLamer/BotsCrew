@@ -1,4 +1,4 @@
-package dao.BookDao;
+package dao.bookDao;
 
 import java.lang.reflect.Field;
 import java.sql.Connection;
@@ -10,10 +10,10 @@ import java.util.List;
 import java.util.Scanner;
 
 import connection.ConnectionToDB;
-import dao.BookDaoInterface;
+import dao.BookDao;
 import model.BookModel;
 
-public class BookDao implements BookDaoInterface {
+public class BookDaoImpl implements BookDao {
 	private static final String ADD_BOOK_STATEMENT = "INSERT INTO books (nameOfBook, author) VALUES (?,?);";
 	private static final String UPDATE_BOOK_STATEMENT = "UPDATE books SET nameOfBook=(?), author=(?) WHERE idBooks = (?);";
 	private static final String REMOVE_BOOK_BY_ID_STATEMENT = "DELETE FROM books WHERE idBooks = (?)";

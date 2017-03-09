@@ -3,10 +3,10 @@ package controller;
 import java.util.Scanner;
 
 import model.Menu;
-import service.serviceImpl.BookService;
+import service.serviceImpl.BookServiceImpl;
 
 public class BookController {
-	BookService service = new BookService();
+	BookServiceImpl service = new BookServiceImpl();
 	Menu menu;
 	Scanner scan;
 

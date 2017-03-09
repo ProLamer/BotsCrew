@@ -5,18 +5,18 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import dao.BookDao.BookDao;
+import dao.bookDao.BookDaoImpl;
 import model.BookModel;
-import service.ServiceInterface;
+import service.Service;
 
-public class BookService implements ServiceInterface {
+public class BookServiceImpl implements Service {
 	List<BookModel> books;
-	BookDao bookDao;
+	BookDaoImpl bookDao;
 	BookModel book;
 
-	public BookService() {
+	public BookServiceImpl() {
 		book = new BookModel();
-		bookDao = new BookDao();
+		bookDao = new BookDaoImpl();
 	}
 
 	private BookModel initBookModel(String author, String nameOfBook) {

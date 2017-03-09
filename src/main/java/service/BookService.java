@@ -1,6 +1,6 @@
 package service;
 
-public interface Service {
+public interface BookService {
 	void showAllBooks();
 
 	void addBook(String author, String nameOfBook);

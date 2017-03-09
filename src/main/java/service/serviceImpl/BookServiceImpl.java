@@ -7,9 +7,9 @@ import java.util.regex.Pattern;
 
 import dao.bookDao.BookDaoImpl;
 import model.BookModel;
-import service.Service;
+import service.BookService;
 
-public class BookServiceImpl implements Service {
+public class BookServiceImpl implements BookService {
 	List<BookModel> books;
 	BookDaoImpl bookDao;
 	BookModel book;

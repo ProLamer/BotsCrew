@@ -10,7 +10,8 @@ public class ConnectionToDB {
 	public static synchronized Connection getInstance() {
 		if (instance == null) {
 			try {
-				instance = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/library", "root", "root");
+				instance = DriverManager.getConnection(
+						"jdbc:mysql://127.0.0.1:3306/library?createDatabaseIfNotExist=true", "root", "root");
 			} catch (SQLException e) {
 				System.out.println("Помилка підключення до бази даних.");
 				e.printStackTrace();

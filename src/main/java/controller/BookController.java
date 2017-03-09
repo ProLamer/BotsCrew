@@ -1,4 +1,4 @@
-package controller.controllerImpl;
+package controller;
 
 import java.util.Scanner;
 

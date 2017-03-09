@@ -1,6 +1,6 @@
 package app;
 
-import controller.controllerImpl.BookController;
+import controller.BookController;
 
 public class Main {
 

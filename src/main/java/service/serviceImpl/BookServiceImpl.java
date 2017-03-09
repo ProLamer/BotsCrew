@@ -32,7 +32,6 @@ public class BookServiceImpl implements BookService {
 			books = bookDao.getAllBooks();
 		} catch (InstantiationException | IllegalAccessException | SQLException e) {
 			System.out.println("Error. Please try again...");
-			e.printStackTrace();
 		}
 		for (BookModel book : books) {
 			System.out.println(book.toString());
@@ -78,8 +77,7 @@ public class BookServiceImpl implements BookService {
 					System.out.println("Error. Please try again...");
 				}
 			} catch (SQLException e) {
-				System.out.println("Error. Please try again later...");
-				e.printStackTrace();
+				System.out.println("Error with database. Please try again later...");
 			}
 		}
 	}
@@ -114,7 +112,6 @@ public class BookServiceImpl implements BookService {
 			}
 		} catch (SQLException e) {
 			System.out.println("Error. Please try again later...");
-			e.printStackTrace();
 		}
 
 	}

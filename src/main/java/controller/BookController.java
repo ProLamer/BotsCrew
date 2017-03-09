@@ -34,7 +34,10 @@ public class BookController {
 
 			switch (command) {
 			case "add":
-				service.addBook(author, nameOfBook);
+				if (checkForNormalLength(author) && checkForNormalLength(nameOfBook)) {
+					service.addBook(author, nameOfBook);
+				}
+
 				break;
 
 			case "remove":
@@ -59,7 +62,9 @@ public class BookController {
 
 				System.out.print("Input new name: ");
 				String newName = scan.nextLine();
-				service.editBook(idStr, newName, newAuthor);
+				if (checkForNormalLength(newAuthor) && checkForNormalLength(newName)) {
+					service.editBook(idStr, newName, newAuthor);
+				}
 				break;
 
 			case "all books":
@@ -80,5 +85,13 @@ public class BookController {
 				break;
 			}
 		}
+	}
+
+	private boolean checkForNormalLength(String text) {
+		if (text.length() > 45) {
+			System.out.println("Too long name of book or author name.");
+			return false;
+		}
+		return true;
 	}
 }
